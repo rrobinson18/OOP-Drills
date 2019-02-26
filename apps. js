@@ -1,0 +1,94 @@
+let person1 = {
+name: 'Jon',
+ sayHello: function() {
+        console.log(`Hello, my name is ${this.name}!`);
+    }
+};
+
+let person2 = {
+name: 'Aria',
+ sayHello: function() {
+        console.log(`Hello, my name is ${this.name}!`);
+    }
+};
+
+let person3 = {
+name: 'Sansa',
+ sayHello: function() {
+        console.log(`Hello, my name is ${this.name}!`);
+    }
+};
+
+let person4 = {
+name: 'Bran',
+ sayHello: function() {
+        console.log(`Hello, my name is ${this.name}!`);
+    }
+};
+
+let person5 = {
+name: 'Sam',
+ sayHello: function() {
+        console.log(`Hello, my name is ${this.name}!`);
+    }
+};
+
+person1.sayHello();
+person2.sayHello();
+person3.sayHello();
+person4.sayHello();
+person5.sayHello();
+
+function Person(name, age, city) {
+    this.name = name;
+    this.age = age;
+    this.city = city;
+}
+
+Person.prototype.sayHello = function() {
+    console.log(`Hey! My name is ${this.name}. I am ${this.age} years old and live in ${this.city}.`);
+}
+
+let p1 = new Person('Danny', 29, 'Dragonstone');
+let p2 = new Person('Cersi', 43, 'Kings Landing');
+let p3 = new Person('Ned', 53, 'Winterfell');
+let p4 = new Person('Lyanna', 9, 'Bear Island');
+let p5 = new Person('Hodor', 50, 'Winterfell');
+p1.sayHello();
+p2.sayHello();
+p3.sayHello();
+p4.sayHello();
+p5.sayHello();
+
+class People {
+    constructor(name, age, city) {
+        this.name = name;
+        this.age = age;
+        this.city = city;
+    }
+
+    sayHello() {
+        console.log(`Hello, my name is ${this.name}! I am ${this.age} years old and live in ${this.city}.`);
+    }
+}
+
+let people1 = new People('Jamie', 43, 'Kings Landing');
+people1.sayHello();
+
+class Vehicle {
+    constructor(type, manufacturer, numberOfWheels) {
+        this.type = type;
+        this.manufacturer = manufacturer;
+        this.numberOfWheels = numberOfWheels;
+    }
+    aboutVehicle() {
+        console.log(`This vehicle is made by ${manufacturer} and has ${numberOfWheels} wheels.`);
+    }
+
+    class Truck extends Vehicle {
+        constructor(numberOfWheels, numberOfDoors, truckBed = true)
+        super(numberOfDoors);
+    }
+}
+
+
